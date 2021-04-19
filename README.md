@@ -10,13 +10,22 @@ This model is a fine-tuned checkpoint of [RoBERTa-large](https://huggingface.co/
  
 # Usage
 The model can be used with few lines of code as shown below. We suggest that you manually label a subset of your data to evaluate performance for your use case. For performance benchmark values across different sentiment analysis contexts, refer to our paper ([Heitmann et al. 2020](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3489963)). The model can also be used as a starting point for further fine-tuning on your sentiment analysis task.
- 
 
+The easiest way to use the model employs Huggingface's [sentiment analysis pipeline](https://huggingface.co/transformers/quicktour.html#getting-started-on-a-task-with-a-pipeline):
+```
+from transformers import pipeline
+sentiment_analysis = pipeline("sentiment-analysis",model="siebert/sentiment-roberta-large-english")
+print(sentiment_analysis("I love this!"))
+```
+
+Alternatively you can load the model as follows:
 ``` 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 tokenizer = AutoTokenizer.from_pretrained("siebert/sentiment-roberta-large-english")
 model = AutoModelForSequenceClassification.from_pretrained("siebert/sentiment-roberta-large-english")
 ```
+
+
  
 # Performance
 To evaluate the performance of our general-purpose sentiment analysis model, we set aside an evaluation set from each data set, which was not used for training. On average, our model outperforms a [DistilBERT-based model](https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english) (which is solely fine-tuned on the popular SST-2 data set) by more than 14 percentage points (78.1 vs. 92.2, see table below). As a robustness check, we evaluate the model in a leave-on-out manner (training on 14 data sets, evaluating on the one left out), which decreases model performance by only about 3 percentage points on average and underscores its generalizability.
