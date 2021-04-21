@@ -2,6 +2,8 @@
 language: "en"
 tags:
 - sentiment
+- twitter
+- reviews
 ---
 
 
@@ -25,35 +27,35 @@ tokenizer = AutoTokenizer.from_pretrained("siebert/sentiment-roberta-large-engli
 model = AutoModelForSequenceClassification.from_pretrained("siebert/sentiment-roberta-large-english")
 ```
 
-
- 
 # Performance
-To evaluate the performance of our general-purpose sentiment analysis model, we set aside an evaluation set from each data set, which was not used for training. On average, our model outperforms a [DistilBERT-based model](https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english) (which is solely fine-tuned on the popular SST-2 data set) by more than 14 percentage points (78.1 vs. 92.2, see table below). As a robustness check, we evaluate the model in a leave-on-out manner (training on 14 data sets, evaluating on the one left out), which decreases model performance by only about 3 percentage points on average and underscores its generalizability.
+To evaluate the performance of our general-purpose sentiment analysis model, we set aside an evaluation set from each data set, which was not used for training. On average, our model outperforms a [DistilBERT-based model](https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english) (which is solely fine-tuned on the popular SST-2 data set) by more than 15 percentage points (78.1 vs. 92.2, see table below). As a robustness check, we evaluate the model in a leave-on-out manner (training on 14 data sets, evaluating on the one left out), which decreases model performance by only about 3 percentage points on average and underscores its generalizability.
 
 |Dataset|DistilBERT SST-2|This model|
 |---|---|---|
-|McAuley and Leskovec (2013) (Reviews)|84.7|95.5|
-|McAuley and Leskovec (2013) (Review Titles)|65.5|87.5|
-|Yelp Academic Dataset|84.8|97.0|
-|Maas et al. (2011)|80.6|91.5|
+|McAuley and Leskovec (2013) (Reviews)|84.7|98.0|
+|McAuley and Leskovec (2013) (Review Titles)|65.5|87.0|
+|Yelp Academic Dataset|84.8|96.5|
+|Maas et al. (2011)|80.6|96.0|
 |Kaggle|87.2|96.0|
 |Pang and Lee (2005)|89.7|91.0|
-|Nakov et al. (2013)|70.1|89.5|
-|Shamma (2009)|76.0|90.0|
-|Blitzer et al. (2007) (Books)|83.0|93.5|
-|Blitzer et al. (2007) (DVDs)|84.5|90.5|
+|Nakov et al. (2013)|70.1|88.5|
+|Shamma (2009)|76.0|87.0|
+|Blitzer et al. (2007) (Books)|83.0|92.5|
+|Blitzer et al. (2007) (DVDs)|84.5|92.5|
 |Blitzer et al. (2007) (Electronics)|74.5|95.0|
-|Blitzer et al. (2007) (Kitchen devices)|80.0|97.5|
-|Pang et al. (2002)|73.5|83.0|
-|Speriosu et al. (2011)|71.5|88.0|
+|Blitzer et al. (2007) (Kitchen devices)|80.0|98.5|
+|Pang et al. (2002)|73.5|95.5|
+|Speriosu et al. (2011)|71.5|85.5|
 |Hartmann et al. (2019)|65.5|98.0|
-|**Average**|**78.1**|**92.2**|
+|**Average**|**78.1**|**93.2**|
  
 # Fine-tuning hyperparameters
 - learning_rate = 2e-5
-- batch_size = 8
-- max_seq_length = 128
 - num_train_epochs = 3.0
+- warmump_steps = 500
+- weight_decay = 0.01
+
+Other values were left at their defaults as listed [here](https://huggingface.co/transformers/main_classes/trainer.html#transformers.TrainingArguments).
   
 # Citation
 Please cite [this paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3489963) when you use our model.
