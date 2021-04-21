@@ -31,7 +31,7 @@ model = AutoModelForSequenceClassification.from_pretrained("siebert/sentiment-ro
 ```
 
 # Performance
-To evaluate the performance of our general-purpose sentiment analysis model, we set aside an evaluation set from each data set, which was not used for training. On average, our model outperforms a [DistilBERT-based model](https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english) (which is solely fine-tuned on the popular SST-2 data set) by more than 15 percentage points (78.1 vs. 92.2, see table below). As a robustness check, we evaluate the model in a leave-on-out manner (training on 14 data sets, evaluating on the one left out), which decreases model performance by only about 3 percentage points on average and underscores its generalizability.
+To evaluate the performance of our general-purpose sentiment analysis model, we set aside an evaluation set from each data set, which was not used for training. On average, our model outperforms a [DistilBERT-based model](https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english) (which is solely fine-tuned on the popular SST-2 data set) by more than 15 percentage points (78.1 vs. 93.2, see table below). As a robustness check, we evaluate the model in a leave-on-out manner (training on 14 data sets, evaluating on the one left out), which decreases model performance by only about 3 percentage points on average and underscores its generalizability.
 
 |Dataset|DistilBERT SST-2|This model|
 |---|---|---|
