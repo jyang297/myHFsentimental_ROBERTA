@@ -20,6 +20,9 @@ sentiment_analysis = pipeline("sentiment-analysis",model="siebert/sentiment-robe
 print(sentiment_analysis("I love this!"))
 ```
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrsiebert/sentiment-roberta-large-english/blob/main/sentiment_roberta_pipeline.ipynb)
+
+
 Alternatively, you can load the model as follows:
 ``` 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
