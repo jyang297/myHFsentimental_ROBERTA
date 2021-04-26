@@ -12,7 +12,7 @@ This model is a fine-tuned checkpoint of [RoBERTa-large](https://huggingface.co/
 
 
 # Predictions on a data set
-If you want to predict sentiment for your own data, we provide an example script via [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb). You can load your data to a Google Drive and run the script for free on a Colab GPU. Set-up takes only a few minutes. We suggest that you manually label a subset of your data to evaluate performance for your use case. For performance benchmark values across various sentiment analysis contexts, please refer to our paper ([Heitmann et al. 2020](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3489963)).
+If you want to predict sentiment for your own data, we provide an example script via [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb). You can load your data to a Google Drive and run the script for free on a Colab GPU. Set-up only takes a few minutes. We suggest that you manually label a subset of your data to evaluate performance for your use case. For performance benchmark values across various sentiment analysis contexts, please refer to our paper ([Heitmann et al. 2020](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3489963)).
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrsiebert/sentiment-roberta-large-english/blob/main/sentiment_roberta_prediction_example.ipynb)
 
