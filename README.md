@@ -62,8 +62,8 @@ To evaluate the performance of our general-purpose sentiment analysis model, we 
 
 Other values were left at their defaults as listed [here](https://huggingface.co/transformers/main_classes/trainer.html#transformers.TrainingArguments).
   
-# Citation
-Please cite [this paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3489963) when you use our model.
+# Citation and contact
+Please cite [this paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3489963) when you use our model. Feel free to reach out to [christian.siebert@uni-hamburg.de](mailto:christian.siebert@uni-hamburg.de) with any questions or feedback you may have.
 
 ```
 @article{heitmann2020,
