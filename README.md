@@ -4,15 +4,17 @@ tags:
 - sentiment
 - twitter
 - reviews
+- siebert
 ---
 
+## SiEBERT - English-Language Sentiment Classification
 
 # Overview
-This model is a fine-tuned checkpoint of [RoBERTa-large](https://huggingface.co/roberta-large) ([Liu et al. 2019](https://arxiv.org/pdf/1907.11692.pdf)). It enables reliable binary sentiment analysis for various types of English-language text. For each instance, it predicts either positive (1) or negative (0) sentiment. The model was fine-tuned and evaluated on 15 data sets from diverse text sources to enhance generalization across different types of texts (reviews, tweets, etc.). Consequently, it outperforms models trained on only one type of text (e.g., movie reviews from the popular SST-2 benchmark) when used on new data as shown below. 
+This model ("SiEBERT", prefix for "Sentiment in English") is a fine-tuned checkpoint of [RoBERTa-large](https://huggingface.co/roberta-large) ([Liu et al. 2019](https://arxiv.org/pdf/1907.11692.pdf)). It enables reliable binary sentiment analysis for various types of English-language text. For each instance, it predicts either positive (1) or negative (0) sentiment. The model was fine-tuned and evaluated on 15 data sets from diverse text sources to enhance generalization across different types of texts (reviews, tweets, etc.). Consequently, it outperforms models trained on only one type of text (e.g., movie reviews from the popular SST-2 benchmark) when used on new data as shown below. 
 
 
 # Predictions on a data set
-If you want to predict sentiment for your own data, we provide an example script via [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb). You can load your data to a Google Drive and run the script for free on a Colab GPU. Set-up only takes a few minutes. We suggest that you manually label a subset of your data to evaluate performance for your use case. For performance benchmark values across various sentiment analysis contexts, please refer to our paper ([Heitmann et al. 2020](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3489963)).
+If you want to predict sentiment for your own data, we provide an example script via [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb). You can load your data to a Google Drive and run the script for free on a Colab GPU. Set-up only takes a few minutes. We suggest that you manually label a subset of your data to evaluate performance for your use case. For performance benchmark values across various sentiment analysis contexts, please refer to our paper ([Hartmann et al. 2022](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3489963)).
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrsiebert/sentiment-roberta-large-english/blob/main/sentiment_roberta_prediction_example.ipynb)
 
@@ -63,13 +65,13 @@ To evaluate the performance of our general-purpose sentiment analysis model, we 
 Other values were left at their defaults as listed [here](https://huggingface.co/transformers/main_classes/trainer.html#transformers.TrainingArguments).
   
 # Citation and contact
-Please cite [this paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3489963) when you use our model. Feel free to reach out to [christian.siebert@uni-hamburg.de](mailto:christian.siebert@uni-hamburg.de) with any questions or feedback you may have.
+Please cite [this paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3489963) (Forthcoming in the [IJRM](https://www.journals.elsevier.com/international-journal-of-research-in-marketing)) when you use our model. Feel free to reach out to [christian.siebert@uni-hamburg.de](mailto:christian.siebert@uni-hamburg.de) with any questions or feedback you may have.
 
 ```
-@article{heitmann2020,
-  title={More than a feeling: Benchmarks for sentiment analysis accuracy},
-  author={Heitmann, Mark and Siebert, Christian and Hartmann, Jochen and Schamp, Christina},
-  journal={Available at SSRN 3489963},
-  year={2020}
+@article{hartmann2022,
+  title={More than a feeling: Accuracy and Application of Sentiment Analysis},
+  author={Hartmann, Jochen and Heitmann, Mark and Siebert, Christian and Schamp, Christina},
+  journal={International Journal of Research in Marketing (Forthcoming)},
+  year={2022}
 }
 ```
