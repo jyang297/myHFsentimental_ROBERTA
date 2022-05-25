@@ -31,7 +31,7 @@ print(sentiment_analysis("I love this!"))
 
 
 # Use for further fine-tuning
-The model can also be used as a starting point for further fine-tuning of RoBERTa on your specific data. Please refer to Hugging Face's [documentation](https://huggingface.co/transformers/custom_datasets.html#fine-tuning-with-trainer) for further details and example code.
+The model can also be used as a starting point for further fine-tuning of RoBERTa on your specific data. Please refer to Hugging Face's [documentation](https://huggingface.co/docs/transformers/training) for further details and example code.
 
 
 # Performance
