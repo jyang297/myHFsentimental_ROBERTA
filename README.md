@@ -65,13 +65,20 @@ To evaluate the performance of our general-purpose sentiment analysis model, we 
 Other values were left at their defaults as listed [here](https://huggingface.co/transformers/main_classes/trainer.html#transformers.TrainingArguments).
   
 # Citation and contact
-Please cite [this paper](https://www.sciencedirect.com/science/article/pii/S0167811622000477?via%3Dihub) (Forthcoming in the [IJRM](https://www.journals.elsevier.com/international-journal-of-research-in-marketing)) when you use our model. Feel free to reach out to [christian.siebert@uni-hamburg.de](mailto:christian.siebert@uni-hamburg.de) with any questions or feedback you may have.
+Please cite [this paper](https://www.sciencedirect.com/science/article/pii/S0167811622000477) (Published in the [IJRM](https://www.journals.elsevier.com/international-journal-of-research-in-marketing)) when you use our model. Feel free to reach out to [christian.siebert@uni-hamburg.de](mailto:christian.siebert@uni-hamburg.de) with any questions or feedback you may have.
 
 ```
-@article{hartmann2022,
-  title={More than a feeling: Accuracy and Application of Sentiment Analysis},
-  author={Hartmann, Jochen and Heitmann, Mark and Siebert, Christian and Schamp, Christina},
-  journal={International Journal of Research in Marketing},
-  year={2022}
+
+@article{hartmann2023,
+title = {More than a Feeling: Accuracy and Application of Sentiment Analysis},
+journal = {International Journal of Research in Marketing},
+volume = {40},
+number = {1},
+pages = {75-87},
+year = {2023},
+doi = {https://doi.org/10.1016/j.ijresmar.2022.05.005},
+url = {https://www.sciencedirect.com/science/article/pii/S0167811622000477},
+author = {Jochen Hartmann and Mark Heitmann and Christian Siebert and Christina Schamp},
 }
+
 ```
